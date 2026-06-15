@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Process *)",
+      "PowerShell(Get-ChildItem \"D:\\\\CLAUDE CODE\\\\WEB LLANTERA\" -Force | Where-Object { $_.Name -notmatch '^\\\\.' -or $_.Name -eq '.claude' } | Select-Object Name, PSIsContainer)"
+    ]
+  }
+}

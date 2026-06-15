@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Super Llantas Sato – La seguridad de todos es nuestra prioridad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#inicio" class="logo">
+        <img src="logo.png" alt="Llantas Sato" class="logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
+        <span class="logo-text" style="display:none;">
+          <span class="logo-icon">&#11044;</span> Llantas<strong>Sato</strong>
+        </span>
+      </a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#inicio"       data-i18n="nav-inicio">Inicio</a></li>
+          <li><a href="#servicios"    data-i18n="nav-servicios">Servicios</a></li>
+          <li><a href="#marcas"       data-i18n="nav-marcas">Marcas</a></li>
+          <li><a href="#nosotros"     data-i18n="nav-nosotros">Nosotros</a></li>
+          <li><a href="#sucursales"   data-i18n="nav-sucursales">Sucursales</a></li>
+          <li><a href="#contacto"     data-i18n="nav-contacto">Contacto</a></li>
+          <li><a href="#informacion" class="btn-nav" data-i18n="nav-info">Pedir Información</a></li>
+        </ul>
+        <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma">
+          🇺🇸 EN
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <img src="llantera_buelna.png" alt="" class="hero-bg-img" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="hero-sub" data-i18n="hero-sub">Super Llantas Sato &nbsp;·&nbsp; Desde 1979</p>
+      <h1 data-i18n="hero-h1">Expertos en <span>Llantas</span> y Servicio Automotriz</h1>
+      <p class="hero-desc" data-i18n="hero-desc">"La seguridad de todos es nuestra prioridad."</p>
+      <div class="hero-btns">
+        <a href="#sucursales" class="btn btn-primary" data-i18n="hero-btn1">Ver Sucursales</a>
+        <a href="#servicios"  class="btn btn-outline"  data-i18n="hero-btn2">Nuestros Servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <span class="stat-num">45+</span>
+        <span class="stat-label" data-i18n="stat-years">Años de experiencia</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">4</span>
+        <span class="stat-label" data-i18n="stat-branches">Sucursales</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">11+</span>
+        <span class="stat-label" data-i18n="stat-brands">Marcas disponibles</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">10</span>
+        <span class="stat-label" data-i18n="stat-services">Servicios especializados</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="section servicios" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag" data-i18n="srv-tag">Lo que ofrecemos</p>
+        <h2 data-i18n="srv-h2">Nuestros Servicios</h2>
+        <p class="section-desc" data-i18n="srv-desc">Contamos con todo lo necesario para mantener tu vehículo en óptimas condiciones.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3 data-i18n="svc1-h3">Montaje de Llantas</h3>
+          <p data-i18n="svc1-p">Instalación profesional de llantas para todo tipo de vehículos: autos, camionetas, deportivos y más.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚖️</div>
+          <h3 data-i18n="svc2-h3">Balanceo Computarizado</h3>
+          <p data-i18n="svc2-p">Balanceo de precisión para una marcha suave y mayor vida útil de tus llantas.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚗</div>
+          <h3 data-i18n="svc3-h3">Alineación Computarizada</h3>
+          <p data-i18n="svc3-p">Alineación de dirección para mejorar el manejo, reducir el desgaste y ahorrar combustible.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔄</div>
+          <h3 data-i18n="svc4-h3">Rotación de Llantas</h3>
+          <p data-i18n="svc4-p">Extendemos la vida de tus llantas con una rotación periódica y correcta.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛢️</div>
+          <h3 data-i18n="svc5-h3">Cambio de Aceite y Filtro</h3>
+          <p data-i18n="svc5-p">Mantenimiento de motor con los mejores aceites y filtros del mercado.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚙️</div>
+          <h3 data-i18n="svc6-h3">Afinaciones</h3>
+          <p data-i18n="svc6-p">Revisión y ajuste completo del motor para un rendimiento óptimo de tu vehículo.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛑</div>
+          <h3 data-i18n="svc7-h3">Frenos y Suspensión</h3>
+          <p data-i18n="svc7-p">Revisión, ajuste y cambio de frenos y suspensión para tu seguridad en el camino.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌡️</div>
+          <h3 data-i18n="svc8-h3">Inflado con Nitrógeno</h3>
+          <p data-i18n="svc8-p">Mayor estabilidad en la presión, mejor rendimiento de combustible y menor desgaste.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔩</div>
+          <h3 data-i18n="svc9-h3">Amortiguadores</h3>
+          <p data-i18n="svc9-p">Cambio e instalación de amortiguadores para una conducción cómoda y segura.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏎️</div>
+          <h3 data-i18n="svc10-h3">Mecánica General</h3>
+          <p data-i18n="svc10-p">Diagnóstico y reparación general para mantener tu vehículo en perfectas condiciones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS -->
+  <section class="section marcas" id="marcas">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag" data-i18n="mrc-tag">Trabajamos con</p>
+        <h2 data-i18n="mrc-h2">Marcas Disponibles</h2>
+        <p class="section-desc" data-i18n="mrc-desc">Manejamos las mejores marcas del mercado para automóviles, camionetas, deportivos, camiones y vehículos agrícolas.</p>
+      </div>
+      <div class="marcas-inner">
+        <div class="marcas-left">
+          <div class="marcas-grid">
+            <div class="marca-card">Cooper</div>
+            <div class="marca-card">Nexen</div>
+            <div class="marca-card">Goodride</div>
+            <div class="marca-card">Sailun</div>
+            <div class="marca-card">Michelin</div>
+            <div class="marca-card">BFGoodrich</div>
+            <div class="marca-card">Roadstone</div>
+            <div class="marca-card">Pirelli</div>
+            <div class="marca-card">Hankook</div>
+            <div class="marca-card">Starfire</div>
+            <div class="marca-card">Roadmaster</div>
+          </div>
+          <div class="vehiculos">
+            <p class="vehiculos-label" data-i18n="mrc-veh-label">Vehículos que atendemos</p>
+            <div class="vehiculos-tags">
+              <span data-i18n="veh1">🚗 Automóvil</span>
+              <span data-i18n="veh2">🚙 Camioneta</span>
+              <span data-i18n="veh3">🏎️ Deportivo</span>
+              <span data-i18n="veh4">🚛 Camión</span>
+              <span data-i18n="veh5">🚜 Agrícola</span>
+            </div>
+          </div>
+        </div>
+        <div class="marcas-right">
+          <img src="https://www.llantassato.com/assets2/marcas_480x480.png"
+            alt="Marcas de llantas disponibles en Super Llantas Sato"
+            class="marcas-img" onerror="this.style.display='none';" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="section nosotros" id="nosotros">
+    <div class="container nosotros-inner">
+      <div class="nosotros-img">
+        <img src="https://www.llantassato.com/assets2/viaja_seguro-es.jpg"
+          alt="Super Llantas Sato – Viaja Seguro"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="img-placeholder" style="display:none;"><span>🏪</span><p>Super Llantas Sato</p></div>
+      </div>
+      <div class="nosotros-text">
+        <p class="section-tag" data-i18n="nos-tag">¿Quiénes somos?</p>
+        <h2 data-i18n="nos-h2">Más de 45 años cuidando tu seguridad</h2>
+        <p data-i18n="nos-p1"><strong>Super Llantas Sato S.A. de C.V.</strong> es una empresa fundada en 1979 con presencia en Sinaloa y Baja California Sur. Con más de 45 años en el mercado, nos hemos consolidado como líderes en venta de llantas y servicios automotrices en el noroeste de México.</p>
+        <p data-i18n="nos-p2">Contamos con 4 sucursales estratégicamente ubicadas y un equipo de técnicos certificados respaldados por equipo computarizado de última generación.</p>
+        <ul class="nosotros-list">
+          <li data-i18n="nos-li1">✅ Fundada en 1979</li>
+          <li data-i18n="nos-li2">✅ 4 sucursales en Sinaloa y BCS</li>
+          <li data-i18n="nos-li3">✅ Técnicos certificados</li>
+          <li data-i18n="nos-li4">✅ Equipo computarizado de precisión</li>
+          <li data-i18n="nos-li5">✅ Las mejores marcas de llantas</li>
+        </ul>
+        <blockquote class="nosotros-slogan" data-i18n="nos-quote">
+          "La seguridad de todos es nuestra prioridad."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUCURSALES -->
+  <section class="section sucursales" id="sucursales">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag" data-i18n="suc-tag">Encuéntranos</p>
+        <h2 data-i18n="suc-h2">Nuestras Sucursales</h2>
+        <p class="section-desc" data-i18n="suc-desc">Visítanos en cualquiera de nuestras sucursales. ¡Estamos cerca de ti!</p>
+      </div>
+      <div class="sucursales-grid">
+
+        <div class="sucursal-card">
+          <div class="sucursal-header">
+            <span class="sucursal-num">01</span>
+            <div>
+              <h3>Rafael Buelna</h3>
+              <span class="sucursal-ciudad">Mazatlán, Sinaloa</span>
+            </div>
+          </div>
+          <ul class="sucursal-info">
+            <li><span>📍</span> Av. Rafael Buelna #207, Fracc. Lomas de Mazatlán, CP 82110</li>
+            <li><span>📞</span> <a href="tel:+526691120330">669 112-0330</a></li>
+          </ul>
+          <div class="sucursal-horario">
+            <strong>🕐</strong> <span data-i18n="suc-hours">Lun–Vie 8:00am–6:30pm &nbsp;·&nbsp; Sáb 8:00am–2:00pm</span>
+          </div>
+          <a href="https://g.page/llantas-sato-maz-buelna?share" target="_blank" rel="noopener" class="btn-mapa" data-i18n="suc-maps">Ver en Google Maps →</a>
+        </div>
+
+        <div class="sucursal-card">
+          <div class="sucursal-header">
+            <span class="sucursal-num">02</span>
+            <div>
+              <h3>Barrancos</h3>
+              <span class="sucursal-ciudad">Culiacán, Sinaloa</span>
+            </div>
+          </div>
+          <ul class="sucursal-info">
+            <li><span>📍</span> Ave. Las Torres #3125-A, Col. Nakayama, CP 80194</li>
+            <li><span>📞</span> <a href="tel:+526677146653">667 714-6653</a></li>
+          </ul>
+          <div class="sucursal-horario">
+            <strong>🕐</strong> <span data-i18n="suc-hours">Lun–Vie 8:00am–6:30pm &nbsp;·&nbsp; Sáb 8:00am–2:00pm</span>
+          </div>
+          <a href="https://goo.gl/maps/8YFr3RuhJTMThEmU6" target="_blank" rel="noopener" class="btn-mapa" data-i18n="suc-maps">Ver en Google Maps →</a>
+        </div>
+
+        <div class="sucursal-card">
+          <div class="sucursal-header">
+            <span class="sucursal-num">03</span>
+            <div>
+              <h3>La Paz</h3>
+              <span class="sucursal-ciudad">La Paz, BCS</span>
+            </div>
+          </div>
+          <ul class="sucursal-info">
+            <li><span>📍</span> Blvd. 5 de Febrero y Marcelo Rubio, Col. Pueblo Nuevo, CP 23050</li>
+            <li><span>📞</span> <a href="tel:+526121231477">612 123-1477</a></li>
+          </ul>
+          <div class="sucursal-horario">
+            <strong>🕐</strong> <span data-i18n="suc-hours">Lun–Vie 8:00am–6:30pm &nbsp;·&nbsp; Sáb 8:00am–2:00pm</span>
+          </div>
+          <a href="https://goo.gl/maps/95wDqZjshpP9wRVL9" target="_blank" rel="noopener" class="btn-mapa" data-i18n="suc-maps">Ver en Google Maps →</a>
+        </div>
+
+        <div class="sucursal-card">
+          <div class="sucursal-header">
+            <span class="sucursal-num">04</span>
+            <div>
+              <h3>Guasave</h3>
+              <span class="sucursal-ciudad">Guasave, Sinaloa</span>
+            </div>
+          </div>
+          <ul class="sucursal-info">
+            <li><span>📍</span> Blvd. Central y Gabriel M. Martínez, Col. Centro, CP 81000</li>
+            <li><span>📞</span> <a href="tel:+526878722345">687 872-2345</a></li>
+          </ul>
+          <div class="sucursal-horario">
+            <strong>🕐</strong> <span data-i18n="suc-hours">Lun–Vie 8:00am–6:30pm &nbsp;·&nbsp; Sáb 8:00am–2:00pm</span>
+          </div>
+          <a href="https://goo.gl/maps/LpJYuGd24GybCPMH7" target="_blank" rel="noopener" class="btn-mapa" data-i18n="suc-maps">Ver en Google Maps →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section contacto" id="contacto">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <p class="section-tag" data-i18n="con-tag">Comunícate con nosotros</p>
+        <h2 data-i18n="con-h2">Contacto</h2>
+        <p class="section-desc" data-i18n="con-desc">Estamos disponibles para resolver tus dudas y brindarte la mejor atención.</p>
+      </div>
+      <div class="contacto-grid">
+        <div class="contacto-card">
+          <div class="contacto-icon">💬</div>
+          <h4>WhatsApp</h4>
+          <a href="https://wa.me/526699810810" target="_blank" rel="noopener">669 981-0810</a>
+        </div>
+        <div class="contacto-card">
+          <div class="contacto-icon">✉️</div>
+          <h4 data-i18n="con-email-h4">Correo Electrónico</h4>
+          <a href="mailto:social@llantassato.com">social@llantassato.com</a>
+        </div>
+        <div class="contacto-card">
+          <div class="contacto-icon">📘</div>
+          <h4>Facebook</h4>
+          <a href="https://www.facebook.com/llantassato" target="_blank" rel="noopener">@llantassato</a>
+        </div>
+        <div class="contacto-card">
+          <div class="contacto-icon">📷</div>
+          <h4>Instagram</h4>
+          <a href="https://instagram.com/llantassato" target="_blank" rel="noopener">@llantassato</a>
+        </div>
+        <div class="contacto-card">
+          <div class="contacto-icon">🕐</div>
+          <h4 data-i18n="con-hours-h4">Horario de Atención</h4>
+          <p data-i18n="con-hours-p">Lun–Vie: 8:00 am – 6:30 pm<br>Sábado: 8:00 am – 2:00 pm<br>Domingo: Cerrado</p>
+        </div>
+        <div class="contacto-card">
+          <div class="contacto-icon">🌐</div>
+          <h4 data-i18n="con-web-h4">Sitio Web</h4>
+          <a href="https://www.llantassato.com" target="_blank" rel="noopener">llantassato.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PEDIR INFORMACIÓN -->
+  <section class="section info-form-section" id="informacion">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag" data-i18n="inf-tag">¿Tienes dudas?</p>
+        <h2 data-i18n="inf-h2">Pedir Información</h2>
+        <p class="section-desc" data-i18n="inf-desc">Déjanos tus datos y con gusto te contactamos para resolver cualquier pregunta.</p>
+      </div>
+      <form class="info-form" id="infoForm" novalidate>
+        <div class="info-form-row">
+          <div class="info-form-group">
+            <label for="infoNombre" data-i18n="inf-label-nombre">Nombre completo *</label>
+            <input type="text" id="infoNombre" name="nombre" data-i18n-ph="inf-ph-nombre" placeholder="Tu nombre" required />
+            <span class="info-error" id="infoNombreErr"></span>
+          </div>
+          <div class="info-form-group">
+            <label for="infoEmail" data-i18n="inf-label-email">Correo electrónico *</label>
+            <input type="email" id="infoEmail" name="email" data-i18n-ph="inf-ph-email" placeholder="tu@correo.com" required />
+            <span class="info-error" id="infoEmailErr"></span>
+          </div>
+        </div>
+        <div class="info-form-row">
+          <div class="info-form-group">
+            <label for="infoTelefono" data-i18n="inf-label-tel">Teléfono</label>
+            <input type="tel" id="infoTelefono" name="telefono" data-i18n-ph="inf-ph-tel" placeholder="Ej. 667 123 4567" />
+          </div>
+          <div class="info-form-group">
+            <label for="infoSucursal" data-i18n="inf-label-suc">Sucursal más cercana</label>
+            <select id="infoSucursal" name="sucursal">
+              <option value="" data-i18n="inf-opt-suc">Selecciona una sucursal</option>
+              <option>Rafael Buelna – Mazatlán</option>
+              <option>Barrancos – Culiacán</option>
+              <option>La Paz – BCS</option>
+              <option>Guasave – Sinaloa</option>
+            </select>
+          </div>
+        </div>
+        <div class="info-form-row">
+          <div class="info-form-group">
+            <label for="infoTipo" data-i18n="inf-label-tipo">Tipo de consulta *</label>
+            <select id="infoTipo" name="tipo" required>
+              <option value="" data-i18n="inf-opt-tipo0">Selecciona un tema</option>
+              <option data-i18n="inf-opt-tipo1">Información sobre llantas</option>
+              <option data-i18n="inf-opt-tipo2">Precios y disponibilidad</option>
+              <option data-i18n="inf-opt-tipo3">Servicios automotrices</option>
+              <option data-i18n="inf-opt-tipo4">Ubicación y horarios</option>
+              <option data-i18n="inf-opt-tipo5">Otra consulta</option>
+            </select>
+            <span class="info-error" id="infoTipoErr"></span>
+          </div>
+        </div>
+        <div class="info-form-group info-form-group--full">
+          <label for="infoMensaje" data-i18n="inf-label-msg">Mensaje *</label>
+          <textarea id="infoMensaje" name="mensaje" rows="4"
+            data-i18n-ph="inf-ph-msg"
+            placeholder="Escribe aquí tu pregunta o comentario..." required></textarea>
+          <span class="info-error" id="infoMensajeErr"></span>
+        </div>
+        <button type="submit" class="btn btn-primary info-btn-submit" data-i18n="inf-btn">Enviar Mensaje</button>
+        <div class="info-success" id="infoSuccess" data-i18n="inf-success">
+          ✅ ¡Mensaje enviado! Nos pondremos en contacto contigo pronto.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#inicio" class="logo logo--light">
+          <img src="logo.png" alt="Llantas Sato" class="logo-img"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
+          <span class="logo-text" style="display:none;">
+            <span class="logo-icon">&#11044;</span> Llantas<strong>Sato</strong>
+          </span>
+        </a>
+        <p data-i18n="ftr-brand-p">Expertos en llantas y servicios automotrices con más de 45 años en el mercado. Sinaloa y Baja California Sur.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/llantassato" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+          <a href="https://instagram.com/llantassato" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4 data-i18n="ftr-nav-h4">Navegación</h4>
+        <ul>
+          <li><a href="#inicio"       data-i18n="nav-inicio">Inicio</a></li>
+          <li><a href="#servicios"    data-i18n="nav-servicios">Servicios</a></li>
+          <li><a href="#marcas"       data-i18n="nav-marcas">Marcas</a></li>
+          <li><a href="#nosotros"     data-i18n="nav-nosotros">Nosotros</a></li>
+          <li><a href="#sucursales"   data-i18n="nav-sucursales">Sucursales</a></li>
+          <li><a href="#contacto"     data-i18n="nav-contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4 data-i18n="ftr-srv-h4">Servicios</h4>
+        <ul>
+          <li><a href="#servicios" data-i18n="svc1-h3">Montaje de Llantas</a></li>
+          <li><a href="#servicios" data-i18n="ftr-srv2">Balanceo y Alineación</a></li>
+          <li><a href="#servicios" data-i18n="svc5-h3">Cambio de Aceite y Filtro</a></li>
+          <li><a href="#servicios" data-i18n="svc7-h3">Frenos y Suspensión</a></li>
+          <li><a href="#servicios" data-i18n="svc10-h3">Mecánica General</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4 data-i18n="con-h2">Contacto</h4>
+        <p>✉️ <a href="mailto:social@llantassato.com">social@llantassato.com</a></p>
+        <p>🌐 <a href="https://www.llantassato.com" target="_blank" rel="noopener">llantassato.com</a></p>
+        <p data-i18n="ftr-hours1">🕐 Lun–Vie: 8:00am – 6:30pm</p>
+        <p data-i18n="ftr-hours2">🕐 Sáb: 8:00am – 2:00pm</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="ftr-copy">&copy; 2026 Super Llantas Sato S.A. de C.V. &nbsp;·&nbsp; Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

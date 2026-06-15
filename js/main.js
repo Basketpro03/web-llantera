@@ -1,0 +1,441 @@
+// ── EmailJS ───────────────────────────────────────────────────────────────────
+// Crea tu cuenta gratis en https://www.emailjs.com y reemplaza estos tres valores:
+const EMAILJS_PUBLIC_KEY  = 'TU_PUBLIC_KEY';   // Account → API Keys
+const EMAILJS_SERVICE_ID  = 'TU_SERVICE_ID';   // Email Services → Service ID
+const EMAILJS_TEMPLATE_ID = 'TU_TEMPLATE_ID';  // Email Templates → Template ID
+
+emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+// ── Language switcher ──────────────────────────────────────────────────────────
+
+const TRANSLATIONS = {
+  es: {
+    // Navbar
+    'nav-inicio':    'Inicio',
+    'nav-servicios': 'Servicios',
+    'nav-marcas':    'Marcas',
+    'nav-nosotros':  'Nosotros',
+    'nav-sucursales':'Sucursales',
+    'nav-contacto':  'Contacto',
+    'nav-info':      'Pedir Información',
+
+    // Hero
+    'hero-sub':  'Super Llantas Sato &nbsp;·&nbsp; Desde 1979',
+    'hero-h1':   'Expertos en <span>Llantas</span> y Servicio Automotriz',
+    'hero-desc': '"La seguridad de todos es nuestra prioridad."',
+    'hero-btn1': 'Ver Sucursales',
+    'hero-btn2': 'Nuestros Servicios',
+
+    // Stats
+    'stat-years':    'Años de experiencia',
+    'stat-branches': 'Sucursales',
+    'stat-brands':   'Marcas disponibles',
+    'stat-services': 'Servicios especializados',
+
+    // Services section
+    'srv-tag':  'Lo que ofrecemos',
+    'srv-h2':   'Nuestros Servicios',
+    'srv-desc': 'Contamos con todo lo necesario para mantener tu vehículo en óptimas condiciones.',
+
+    'svc1-h3': 'Montaje de Llantas',
+    'svc1-p':  'Instalación profesional de llantas para todo tipo de vehículos: autos, camionetas, deportivos y más.',
+    'svc2-h3': 'Balanceo Computarizado',
+    'svc2-p':  'Balanceo de precisión para una marcha suave y mayor vida útil de tus llantas.',
+    'svc3-h3': 'Alineación Computarizada',
+    'svc3-p':  'Alineación de dirección para mejorar el manejo, reducir el desgaste y ahorrar combustible.',
+    'svc4-h3': 'Rotación de Llantas',
+    'svc4-p':  'Extendemos la vida de tus llantas con una rotación periódica y correcta.',
+    'svc5-h3': 'Cambio de Aceite y Filtro',
+    'svc5-p':  'Mantenimiento de motor con los mejores aceites y filtros del mercado.',
+    'svc6-h3': 'Afinaciones',
+    'svc6-p':  'Revisión y ajuste completo del motor para un rendimiento óptimo de tu vehículo.',
+    'svc7-h3': 'Frenos y Suspensión',
+    'svc7-p':  'Revisión, ajuste y cambio de frenos y suspensión para tu seguridad en el camino.',
+    'svc8-h3': 'Inflado con Nitrógeno',
+    'svc8-p':  'Mayor estabilidad en la presión, mejor rendimiento de combustible y menor desgaste.',
+    'svc9-h3': 'Amortiguadores',
+    'svc9-p':  'Cambio e instalación de amortiguadores para una conducción cómoda y segura.',
+    'svc10-h3':'Mecánica General',
+    'svc10-p': 'Diagnóstico y reparación general para mantener tu vehículo en perfectas condiciones.',
+
+    // Brands
+    'mrc-tag':       'Trabajamos con',
+    'mrc-h2':        'Marcas Disponibles',
+    'mrc-desc':      'Manejamos las mejores marcas del mercado para automóviles, camionetas, deportivos, camiones y vehículos agrícolas.',
+    'mrc-veh-label': 'Vehículos que atendemos',
+    'veh1': '🚗 Automóvil',
+    'veh2': '🚙 Camioneta',
+    'veh3': '🏎️ Deportivo',
+    'veh4': '🚛 Camión',
+    'veh5': '🚜 Agrícola',
+
+    // About
+    'nos-tag': '¿Quiénes somos?',
+    'nos-h2':  'Más de 45 años cuidando tu seguridad',
+    'nos-p1':  '<strong>Super Llantas Sato S.A. de C.V.</strong> es una empresa fundada en 1979 con presencia en Sinaloa y Baja California Sur. Con más de 45 años en el mercado, nos hemos consolidado como líderes en venta de llantas y servicios automotrices en el noroeste de México.',
+    'nos-p2':  'Contamos con 4 sucursales estratégicamente ubicadas y un equipo de técnicos certificados respaldados por equipo computarizado de última generación.',
+    'nos-li1': '✅ Fundada en 1979',
+    'nos-li2': '✅ 4 sucursales en Sinaloa y BCS',
+    'nos-li3': '✅ Técnicos certificados',
+    'nos-li4': '✅ Equipo computarizado de precisión',
+    'nos-li5': '✅ Las mejores marcas de llantas',
+    'nos-quote': '"La seguridad de todos es nuestra prioridad."',
+
+    // Branches
+    'suc-tag':   'Encuéntranos',
+    'suc-h2':    'Nuestras Sucursales',
+    'suc-desc':  'Visítanos en cualquiera de nuestras sucursales. ¡Estamos cerca de ti!',
+    'suc-hours': 'Lun–Vie 8:00am–6:30pm &nbsp;·&nbsp; Sáb 8:00am–2:00pm',
+    'suc-maps':  'Ver en Google Maps →',
+
+    // Contact
+    'con-tag':      'Comunícate con nosotros',
+    'con-h2':       'Contacto',
+    'con-desc':     'Estamos disponibles para resolver tus dudas y brindarte la mejor atención.',
+    'con-email-h4': 'Correo Electrónico',
+    'con-hours-h4': 'Horario de Atención',
+    'con-hours-p':  'Lun–Vie: 8:00 am – 6:30 pm<br>Sábado: 8:00 am – 2:00 pm<br>Domingo: Cerrado',
+    'con-web-h4':   'Sitio Web',
+
+    // Info form
+    'inf-tag':       '¿Tienes dudas?',
+    'inf-h2':        'Pedir Información',
+    'inf-desc':      'Déjanos tus datos y con gusto te contactamos para resolver cualquier pregunta.',
+    'inf-label-nombre': 'Nombre completo *',
+    'inf-ph-nombre':    'Tu nombre',
+    'inf-label-email':  'Correo electrónico *',
+    'inf-ph-email':     'tu@correo.com',
+    'inf-label-tel':    'Teléfono',
+    'inf-ph-tel':       'Ej. 667 123 4567',
+    'inf-label-suc':    'Sucursal más cercana',
+    'inf-opt-suc':      'Selecciona una sucursal',
+    'inf-label-tipo':   'Tipo de consulta *',
+    'inf-opt-tipo0':    'Selecciona un tema',
+    'inf-opt-tipo1':    'Información sobre llantas',
+    'inf-opt-tipo2':    'Precios y disponibilidad',
+    'inf-opt-tipo3':    'Servicios automotrices',
+    'inf-opt-tipo4':    'Ubicación y horarios',
+    'inf-opt-tipo5':    'Otra consulta',
+    'inf-label-msg':    'Mensaje *',
+    'inf-ph-msg':       'Escribe aquí tu pregunta o comentario...',
+    'inf-btn':          'Enviar Mensaje',
+    'inf-success':      '✅ ¡Mensaje enviado! Nos pondremos en contacto contigo pronto.',
+
+    // Footer
+    'ftr-brand-p': 'Expertos en llantas y servicios automotrices con más de 45 años en el mercado. Sinaloa y Baja California Sur.',
+    'ftr-nav-h4':  'Navegación',
+    'ftr-srv-h4':  'Servicios',
+    'ftr-srv2':    'Balanceo y Alineación',
+    'ftr-hours1':  '🕐 Lun–Vie: 8:00am – 6:30pm',
+    'ftr-hours2':  '🕐 Sáb: 8:00am – 2:00pm',
+    'ftr-copy':    '© 2026 Super Llantas Sato S.A. de C.V. &nbsp;·&nbsp; Todos los derechos reservados.',
+  },
+
+  en: {
+    // Navbar
+    'nav-inicio':    'Home',
+    'nav-servicios': 'Services',
+    'nav-marcas':    'Brands',
+    'nav-nosotros':  'About Us',
+    'nav-sucursales':'Branches',
+    'nav-contacto':  'Contact',
+    'nav-info':      'Request Info',
+
+    // Hero
+    'hero-sub':  'Super Llantas Sato &nbsp;·&nbsp; Since 1979',
+    'hero-h1':   'Experts in <span>Tires</span> and Automotive Service',
+    'hero-desc': '"Safety for everyone is our priority."',
+    'hero-btn1': 'View Branches',
+    'hero-btn2': 'Our Services',
+
+    // Stats
+    'stat-years':    'Years of experience',
+    'stat-branches': 'Branches',
+    'stat-brands':   'Available brands',
+    'stat-services': 'Specialized services',
+
+    // Services section
+    'srv-tag':  'What we offer',
+    'srv-h2':   'Our Services',
+    'srv-desc': 'We have everything you need to keep your vehicle in optimal condition.',
+
+    'svc1-h3': 'Tire Mounting',
+    'svc1-p':  'Professional tire installation for all vehicle types: cars, trucks, sports vehicles, and more.',
+    'svc2-h3': 'Computerized Balancing',
+    'svc2-p':  'Precision balancing for a smooth ride and longer tire life.',
+    'svc3-h3': 'Computerized Alignment',
+    'svc3-p':  'Steering alignment to improve handling, reduce tire wear, and save fuel.',
+    'svc4-h3': 'Tire Rotation',
+    'svc4-p':  'We extend your tire life with timely and proper rotation.',
+    'svc5-h3': 'Oil and Filter Change',
+    'svc5-p':  'Engine maintenance with the best oils and filters on the market.',
+    'svc6-h3': 'Tune-ups',
+    'svc6-p':  'Full engine review and adjustment for optimal vehicle performance.',
+    'svc7-h3': 'Brakes and Suspension',
+    'svc7-p':  'Review, adjustment, and replacement of brakes and suspension for your road safety.',
+    'svc8-h3': 'Nitrogen Inflation',
+    'svc8-p':  'Greater pressure stability, better fuel efficiency, and reduced tire wear.',
+    'svc9-h3': 'Shock Absorbers',
+    'svc9-p':  'Replacement and installation of shock absorbers for a comfortable and safe ride.',
+    'svc10-h3':'General Mechanics',
+    'svc10-p': 'General diagnosis and repair to keep your vehicle in perfect condition.',
+
+    // Brands
+    'mrc-tag':       'We work with',
+    'mrc-h2':        'Available Brands',
+    'mrc-desc':      'We carry the best brands on the market for cars, trucks, sports vehicles, heavy trucks, and agricultural vehicles.',
+    'mrc-veh-label': 'Vehicles we serve',
+    'veh1': '🚗 Car',
+    'veh2': '🚙 Truck / SUV',
+    'veh3': '🏎️ Sports',
+    'veh4': '🚛 Heavy Truck',
+    'veh5': '🚜 Agricultural',
+
+    // About
+    'nos-tag': 'Who are we?',
+    'nos-h2':  'Over 45 years keeping you safe',
+    'nos-p1':  '<strong>Super Llantas Sato S.A. de C.V.</strong> is a company founded in 1979 with presence in Sinaloa and Baja California Sur. With over 45 years in the market, we have established ourselves as leaders in tire sales and automotive services in northwestern Mexico.',
+    'nos-p2':  'We have 4 strategically located branches and a team of certified technicians backed by state-of-the-art computerized equipment.',
+    'nos-li1': '✅ Founded in 1979',
+    'nos-li2': '✅ 4 branches in Sinaloa and BCS',
+    'nos-li3': '✅ Certified technicians',
+    'nos-li4': '✅ Precision computerized equipment',
+    'nos-li5': '✅ The best tire brands',
+    'nos-quote': '"Safety for everyone is our priority."',
+
+    // Branches
+    'suc-tag':   'Find Us',
+    'suc-h2':    'Our Branches',
+    'suc-desc':  'Visit us at any of our branches. We are near you!',
+    'suc-hours': 'Mon–Fri 8:00am–6:30pm &nbsp;·&nbsp; Sat 8:00am–2:00pm',
+    'suc-maps':  'View on Google Maps →',
+
+    // Contact
+    'con-tag':      'Get in touch',
+    'con-h2':       'Contact',
+    'con-desc':     'We are available to answer your questions and provide the best service.',
+    'con-email-h4': 'Email Address',
+    'con-hours-h4': 'Business Hours',
+    'con-hours-p':  'Mon–Fri: 8:00 am – 6:30 pm<br>Saturday: 8:00 am – 2:00 pm<br>Sunday: Closed',
+    'con-web-h4':   'Website',
+
+    // Info form
+    'inf-tag':       'Have questions?',
+    'inf-h2':        'Request Information',
+    'inf-desc':      'Leave us your information and we will gladly contact you to answer any question.',
+    'inf-label-nombre': 'Full name *',
+    'inf-ph-nombre':    'Your name',
+    'inf-label-email':  'Email address *',
+    'inf-ph-email':     'your@email.com',
+    'inf-label-tel':    'Phone',
+    'inf-ph-tel':       'E.g. 667 123 4567',
+    'inf-label-suc':    'Nearest branch',
+    'inf-opt-suc':      'Select a branch',
+    'inf-label-tipo':   'Type of inquiry *',
+    'inf-opt-tipo0':    'Select a topic',
+    'inf-opt-tipo1':    'Tire information',
+    'inf-opt-tipo2':    'Prices and availability',
+    'inf-opt-tipo3':    'Automotive services',
+    'inf-opt-tipo4':    'Location and hours',
+    'inf-opt-tipo5':    'Other inquiry',
+    'inf-label-msg':    'Message *',
+    'inf-ph-msg':       'Write your question or comment here...',
+    'inf-btn':          'Send Message',
+    'inf-success':      '✅ Message sent! We will contact you shortly.',
+
+    // Footer
+    'ftr-brand-p': 'Tire and automotive service experts with over 45 years in the market. Sinaloa and Baja California Sur.',
+    'ftr-nav-h4':  'Navigation',
+    'ftr-srv-h4':  'Services',
+    'ftr-srv2':    'Balancing and Alignment',
+    'ftr-hours1':  '🕐 Mon–Fri: 8:00am – 6:30pm',
+    'ftr-hours2':  '🕐 Sat: 8:00am – 2:00pm',
+    'ftr-copy':    '© 2026 Super Llantas Sato S.A. de C.V. &nbsp;·&nbsp; All rights reserved.',
+  }
+};
+
+// Validation messages per language
+const VALIDATION_MSGS = {
+  es: {
+    nombre:  'Por favor ingresa tu nombre.',
+    tipo:    'Por favor selecciona un tipo de consulta.',
+    mensaje: 'Por favor escribe tu mensaje.',
+    email:   'Por favor ingresa tu correo.',
+    emailFmt:'Ingresa un correo válido.',
+    sending: 'Enviando...',
+  },
+  en: {
+    nombre:  'Please enter your name.',
+    tipo:    'Please select an inquiry type.',
+    mensaje: 'Please write your message.',
+    email:   'Please enter your email.',
+    emailFmt:'Enter a valid email address.',
+    sending: 'Sending...',
+  }
+};
+
+let currentLang = localStorage.getItem('lang') || 'es';
+
+function setLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  document.documentElement.lang = lang;
+
+  const t = TRANSLATIONS[lang];
+
+  // Update all [data-i18n] elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+
+  // Update all [data-i18n-ph] placeholders
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const key = el.getAttribute('data-i18n-ph');
+    if (t[key] !== undefined) el.placeholder = t[key];
+  });
+
+  // Toggle button label
+  const btn = document.getElementById('langToggle');
+  if (btn) btn.textContent = lang === 'es' ? '🇺🇸 EN' : '🇲🇽 ES';
+}
+
+// Init on load
+document.addEventListener('DOMContentLoaded', () => {
+  setLanguage(currentLang);
+
+  document.getElementById('langToggle').addEventListener('click', () => {
+    setLanguage(currentLang === 'es' ? 'en' : 'es');
+  });
+});
+
+// ── Navbar scroll effect ───────────────────────────────────────────────────────
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ── Mobile hamburger menu ──────────────────────────────────────────────────────
+const hamburger = document.getElementById('hamburger');
+const navLinks  = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  hamburger.classList.toggle('open');
+});
+
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+  });
+});
+
+// ── Formulario "Pedir Información" ────────────────────────────────────────────
+const infoForm = document.getElementById('infoForm');
+
+if (infoForm) {
+  infoForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (validarInfoForm()) submitInfoForm();
+  });
+}
+
+function validarInfoForm() {
+  let valid = true;
+  const m = VALIDATION_MSGS[currentLang];
+
+  const requeridos = [
+    { id: 'infoNombre',  errId: 'infoNombreErr',  msg: m.nombre  },
+    { id: 'infoTipo',    errId: 'infoTipoErr',    msg: m.tipo    },
+    { id: 'infoMensaje', errId: 'infoMensajeErr', msg: m.mensaje },
+  ];
+
+  requeridos.forEach(({ id, errId, msg }) => {
+    const el  = document.getElementById(id);
+    const err = document.getElementById(errId);
+    if (!el.value.trim()) {
+      err.textContent = msg;
+      el.style.borderColor = '#e53935';
+      valid = false;
+    } else {
+      err.textContent = '';
+      el.style.borderColor = '';
+    }
+  });
+
+  const emailEl  = document.getElementById('infoEmail');
+  const emailErr = document.getElementById('infoEmailErr');
+  const emailVal = emailEl.value.trim();
+
+  if (!emailVal) {
+    emailErr.textContent = m.email;
+    emailEl.style.borderColor = '#e53935';
+    valid = false;
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+    emailErr.textContent = m.emailFmt;
+    emailEl.style.borderColor = '#e53935';
+    valid = false;
+  } else {
+    emailErr.textContent = '';
+    emailEl.style.borderColor = '';
+  }
+
+  return valid;
+}
+
+function submitInfoForm() {
+  const btn = infoForm.querySelector('.info-btn-submit');
+  const m   = VALIDATION_MSGS[currentLang];
+  btn.textContent = m.sending;
+  btn.disabled = true;
+
+  const templateParams = {
+    from_name:  document.getElementById('infoNombre').value.trim(),
+    from_email: document.getElementById('infoEmail').value.trim(),
+    phone:      document.getElementById('infoTelefono').value.trim() || '—',
+    branch:     document.getElementById('infoSucursal').value || '—',
+    subject:    document.getElementById('infoTipo').value,
+    message:    document.getElementById('infoMensaje').value.trim(),
+    to_email:   'social@llantassato.com',
+  };
+
+  emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+    .then(() => {
+      const successEl = document.getElementById('infoSuccess');
+      successEl.innerHTML = TRANSLATIONS[currentLang]['inf-success'];
+      successEl.style.display = 'block';
+      infoForm.reset();
+      btn.textContent = TRANSLATIONS[currentLang]['inf-btn'];
+      btn.disabled = false;
+      setTimeout(() => { successEl.style.display = 'none'; }, 6000);
+    })
+    .catch((err) => {
+      console.error('EmailJS error:', err);
+      btn.textContent = TRANSLATIONS[currentLang]['inf-btn'];
+      btn.disabled = false;
+      const msg = currentLang === 'es'
+        ? 'Error al enviar. Intenta de nuevo o escríbenos a social@llantassato.com'
+        : 'Failed to send. Try again or email us at social@llantassato.com';
+      alert(msg);
+    });
+}
+
+// ── Scroll-in animation ────────────────────────────────────────────────────────
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.service-card, .stat-item, .sucursal-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity .5s ease, transform .5s ease';
+    observer.observe(el);
+  });
+}
