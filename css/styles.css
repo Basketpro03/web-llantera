@@ -108,7 +108,6 @@ img { display: block; max-width: 100%; }
   height: 90px;
   width: auto;
   display: block;
-  border-radius: 10px;
   object-fit: contain;
 }
 
@@ -352,8 +351,27 @@ img { display: block; max-width: 100%; }
 }
 
 .service-icon {
-  font-size: 2rem;
-  margin-bottom: .75rem;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  background: rgba(204,0,0,.08);
+  color: var(--red);
+  transition: background var(--trans), color var(--trans), transform var(--trans);
+}
+
+.service-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.service-card:hover .service-icon {
+  background: var(--red);
+  color: var(--white);
+  transform: scale(1.06);
 }
 
 .service-card h3 {
@@ -375,27 +393,30 @@ img { display: block; max-width: 100%; }
 .marcas { background: var(--white); }
 
 .marcas-inner {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 3rem;
-  align-items: center;
+  display: block;
 }
 
 .marcas-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: .75rem;
-  margin-bottom: 2rem;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
 }
 
 .marca-card {
-  background: var(--light);
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  padding: .65rem 1.5rem;
-  font-weight: 700;
-  font-size: .9rem;
+  background: var(--white);
+  border: 2px solid #e8e8e8;
+  border-radius: var(--radius);
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: .02em;
   color: var(--dark);
+  box-shadow: var(--shadow);
   transition: all var(--trans);
   cursor: default;
 }
@@ -403,9 +424,8 @@ img { display: block; max-width: 100%; }
 .marca-card:hover {
   border-color: var(--red);
   color: var(--red);
-  background: #fff5f5;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(204,0,0,.15);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(204,0,0,.18);
 }
 
 .vehiculos-label {
@@ -424,6 +444,9 @@ img { display: block; max-width: 100%; }
 }
 
 .vehiculos-tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
   background: var(--dark);
   color: var(--white);
   padding: .4rem 1rem;
@@ -432,12 +455,13 @@ img { display: block; max-width: 100%; }
   font-weight: 600;
 }
 
-.marcas-img {
-  width: 260px;
-  height: auto;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+.veh-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--red);
 }
+
 
 /* ============================
    NOSOTROS
@@ -522,17 +546,35 @@ img { display: block; max-width: 100%; }
 }
 
 .sucursal-card {
+  position: relative;
+  overflow: hidden;
   background: var(--light);
   border-radius: var(--radius);
   padding: 1.75rem;
   border: 2px solid transparent;
-  transition: border-color var(--trans), box-shadow var(--trans), transform var(--trans);
+  transition: border-color var(--trans), box-shadow var(--trans), transform var(--trans), background var(--trans);
+}
+
+.sucursal-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--red), var(--red-dk));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s ease;
 }
 
 .sucursal-card:hover {
+  background: var(--white);
   border-color: var(--red);
-  box-shadow: 0 8px 24px rgba(204,0,0,.12);
-  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(204,0,0,.16);
+  transform: translateY(-6px);
+}
+
+.sucursal-card:hover::before {
+  transform: scaleX(1);
 }
 
 .sucursal-header {
@@ -553,6 +595,20 @@ img { display: block; max-width: 100%; }
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: transform .35s ease, border-radius .35s ease;
+}
+
+.sucursal-card:hover .sucursal-num {
+  transform: scale(1.12) rotate(-8deg);
+  border-radius: 30%;
+}
+
+.sucursal-card:hover .sucursal-header h3 {
+  color: var(--red);
+}
+
+.sucursal-header h3 {
+  transition: color var(--trans);
 }
 
 .sucursal-header h3 {
@@ -604,9 +660,9 @@ img { display: block; max-width: 100%; }
   font-size: .85rem;
   font-weight: 700;
   color: var(--red);
-  transition: color var(--trans), letter-spacing var(--trans);
+  transition: color var(--trans), transform var(--trans);
 }
-.btn-mapa:hover { color: var(--red-dk); letter-spacing: .3px; }
+.sucursal-card:hover .btn-mapa { transform: translateX(3px); color: var(--red-dk); }
 
 /* ============================
    CONTACTO
@@ -949,13 +1005,11 @@ img { display: block; max-width: 100%; }
    ============================ */
 @media (max-width: 1200px) {
   .services-grid { grid-template-columns: repeat(3, 1fr); }
-  .marcas-inner { grid-template-columns: 1fr; }
-  .marcas-right { display: flex; justify-content: center; }
-  .marcas-img { width: 220px; }
 }
 
 @media (max-width: 1024px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .marcas-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .contacto-grid { grid-template-columns: repeat(3, 1fr); }
 }

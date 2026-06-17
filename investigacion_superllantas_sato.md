@@ -91,7 +91,7 @@ Eres un agente encargado de construir el sitio web oficial de **Super Llantas Sa
 
 ## 🛞 Marcas de Llantas
 
-Cooper · Nexen · Goodride · Sailun · Michelin · BFGoodrich · Roadstone · Pirelli · Hankook · Starfire · Roadmaster
+Blackhawk · iLink · Mirage · Winrun · Antares · Broadpeak · Cooper · Goodyear
 
 **Vehículos que atienden:** Automóvil, camioneta, deportivo, camión, agrícola
 
