@@ -6,7 +6,12 @@
       "Bash(start *)",
       "WebSearch",
       "Bash(python3 --version)",
-      "Bash(python --version)"
+      "Bash(python --version)",
+      "Bash(npx --version)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(node measure.mjs)"
     ]
   }
 }

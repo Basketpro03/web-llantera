@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="Logo Solo S.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -16,7 +16,7 @@
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="#inicio" class="logo">
-        <img src="logo.png" alt="Llantas Sato" class="logo-img"
+        <img src="logo_outline_navbar.png" alt="Llantas Sato" class="logo-img"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
         <span class="logo-text" style="display:none;">
           <span class="logo-icon">&#11044;</span> Llantas<strong>Sato</strong>
@@ -33,7 +33,7 @@
           <li><a href="#informacion" class="btn-nav" data-i18n="nav-info">Pedir Información</a></li>
         </ul>
         <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma">
-          🇺🇸 EN
+          EN
         </button>
         <button class="hamburger" id="hamburger" aria-label="Menú">
           <span></span><span></span><span></span>
@@ -53,8 +53,8 @@
       <h1 data-i18n="hero-h1">Expertos en <span>Llantas</span> y Servicio Automotriz</h1>
       <p class="hero-desc" data-i18n="hero-desc">"La seguridad de todos es nuestra prioridad."</p>
       <div class="hero-btns">
-        <a href="#sucursales" class="btn btn-primary" data-i18n="hero-btn1">Ver Sucursales</a>
-        <a href="#servicios"  class="btn btn-outline"  data-i18n="hero-btn2">Nuestros Servicios</a>
+        <a href="#informacion" class="btn btn-primary" data-i18n="hero-btn1">Pedir Información</a>
+        <a href="#sucursales"  class="btn btn-outline"  data-i18n="hero-btn2">Ver Sucursales</a>
       </div>
     </div>
   </section>
@@ -67,11 +67,11 @@
         <span class="stat-label" data-i18n="stat-years">Años de experiencia</span>
       </div>
       <div class="stat-item">
-        <span class="stat-num">4</span>
+        <span class="stat-num">3</span>
         <span class="stat-label" data-i18n="stat-branches">Sucursales</span>
       </div>
       <div class="stat-item">
-        <span class="stat-num">8</span>
+        <span class="stat-num">9+</span>
         <span class="stat-label" data-i18n="stat-brands">Marcas disponibles</span>
       </div>
       <div class="stat-item">
@@ -150,18 +150,19 @@
       <div class="section-header">
         <p class="section-tag" data-i18n="mrc-tag">Trabajamos con</p>
         <h2 data-i18n="mrc-h2">Marcas Disponibles</h2>
-        <p class="section-desc" data-i18n="mrc-desc">Manejamos las mejores marcas del mercado para automóviles, camionetas, deportivos, camiones y vehículos agrícolas.</p>
+        <p class="section-desc" data-i18n="mrc-desc">Algunas de nuestras marcas son:</p>
       </div>
       <div class="marcas-inner">
         <div class="marcas-grid">
+          <div class="marca-card">Cooper</div>
+          <div class="marca-card">Goodyear</div>
+          <div class="marca-card">Michelin</div>
           <div class="marca-card">Blackhawk</div>
           <div class="marca-card">iLink</div>
           <div class="marca-card">Mirage</div>
           <div class="marca-card">Winrun</div>
           <div class="marca-card">Antares</div>
           <div class="marca-card">Broadpeak</div>
-          <div class="marca-card">Cooper</div>
-          <div class="marca-card">Goodyear</div>
         </div>
         <div class="vehiculos">
           <p class="vehiculos-label" data-i18n="mrc-veh-label">Vehículos que atendemos</p>
@@ -173,6 +174,10 @@
             <span data-i18n="veh5"><svg class="veh-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M7 15l0 .01" /><path d="M17 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M10.5 17l6.5 0" /><path d="M20 15.2v-4.2a1 1 0 0 0 -1 -1h-6l-2 -5h-6v6.5" /><path d="M18 5h-1a1 1 0 0 0 -1 1v4" /></svg> Agrícola</span>
           </div>
         </div>
+        <div class="marcas-cta">
+          <p data-i18n="mrc-cta-text">¿No sabes qué llanta necesita tu vehículo? Te asesoramos gratis.</p>
+          <a href="#informacion" class="btn btn-primary" data-i18n="mrc-cta-btn">Pedir Información</a>
+        </div>
       </div>
     </div>
   </section>
@@ -181,22 +186,22 @@
   <section class="section nosotros" id="nosotros">
     <div class="container nosotros-inner">
       <div class="nosotros-img">
-        <img src="https://www.llantassato.com/assets2/viaja_seguro-es.jpg"
-          alt="Super Llantas Sato – Viaja Seguro"
+        <img src="nosotros_llantera.jpg"
+          alt="Técnico de Super Llantas Sato realizando servicio de precisión en una llanta"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div class="img-placeholder" style="display:none;"><span>🏪</span><p>Super Llantas Sato</p></div>
+        <div class="img-placeholder" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l18 0" /><path d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4" /><path d="M5 21l0 -10.15" /><path d="M19 21l0 -10.15" /><path d="M9 21v-4a3 3 0 0 1 6 0v4" /></svg><p>Super Llantas Sato</p></div>
       </div>
       <div class="nosotros-text">
         <p class="section-tag" data-i18n="nos-tag">¿Quiénes somos?</p>
         <h2 data-i18n="nos-h2">Más de 45 años cuidando tu seguridad</h2>
         <p data-i18n="nos-p1"><strong>Super Llantas Sato S.A. de C.V.</strong> es una empresa fundada en 1979 con presencia en Sinaloa y Baja California Sur. Con más de 45 años en el mercado, nos hemos consolidado como líderes en venta de llantas y servicios automotrices en el noroeste de México.</p>
-        <p data-i18n="nos-p2">Contamos con 4 sucursales estratégicamente ubicadas y un equipo de técnicos certificados respaldados por equipo computarizado de última generación.</p>
+        <p data-i18n="nos-p2">Contamos con 3 sucursales estratégicamente ubicadas y un equipo de técnicos certificados respaldados por equipo computarizado de última generación.</p>
         <ul class="nosotros-list">
-          <li data-i18n="nos-li1">✅ Fundada en 1979</li>
-          <li data-i18n="nos-li2">✅ 4 sucursales en Sinaloa y BCS</li>
-          <li data-i18n="nos-li3">✅ Técnicos certificados</li>
-          <li data-i18n="nos-li4">✅ Equipo computarizado de precisión</li>
-          <li data-i18n="nos-li5">✅ Las mejores marcas de llantas</li>
+          <li data-i18n="nos-li1"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> Fundada en 1979</li>
+          <li data-i18n="nos-li2"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> 3 sucursales en Sinaloa y BCS</li>
+          <li data-i18n="nos-li3"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> Técnicos certificados</li>
+          <li data-i18n="nos-li4"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> Equipo computarizado de precisión</li>
+          <li data-i18n="nos-li5"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> Las mejores marcas de llantas</li>
         </ul>
         <blockquote class="nosotros-slogan" data-i18n="nos-quote">
           "La seguridad de todos es nuestra prioridad."
@@ -224,11 +229,11 @@
             </div>
           </div>
           <ul class="sucursal-info">
-            <li><span>📍</span> Av. Rafael Buelna #207, Fracc. Lomas de Mazatlán, CP 82110</li>
-            <li><span>📞</span> <a href="tel:+526691120330">669 112-0330</a></li>
+            <li><span><svg class="suc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" /></svg></span> Av. Rafael Buelna #207, Fracc. Lomas de Mazatlán, CP 82110</li>
+            <li><span><svg class="suc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg></span> <a href="tel:+526691120330">669 112-0330</a></li>
           </ul>
           <div class="sucursal-horario">
-            <strong>🕐</strong> <span data-i18n="suc-hours">Lun–Vie 8:00am–6:30pm &nbsp;·&nbsp; Sáb 8:00am–2:00pm</span>
+            <strong><svg class="suc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5l3 3" /></svg></strong> <span data-i18n="suc-hours">Lun–Vie 8:00am–6:30pm &nbsp;·&nbsp; Sáb 8:00am–2:00pm</span>
           </div>
           <a href="https://g.page/llantas-sato-maz-buelna?share" target="_blank" rel="noopener" class="btn-mapa" data-i18n="suc-maps">Ver en Google Maps →</a>
         </div>
@@ -242,11 +247,11 @@
             </div>
           </div>
           <ul class="sucursal-info">
-            <li><span>📍</span> Ave. Las Torres #3125-A, Col. Nakayama, CP 80194</li>
-            <li><span>📞</span> <a href="tel:+526677146653">667 714-6653</a></li>
+            <li><span><svg class="suc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" /></svg></span> Ave. Las Torres #3125-A, Col. Nakayama, CP 80194</li>
+            <li><span><svg class="suc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg></span> <a href="tel:+526677146653">667 714-6653</a></li>
           </ul>
           <div class="sucursal-horario">
-            <strong>🕐</strong> <span data-i18n="suc-hours">Lun–Vie 8:00am–6:30pm &nbsp;·&nbsp; Sáb 8:00am–2:00pm</span>
+            <strong><svg class="suc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5l3 3" /></svg></strong> <span data-i18n="suc-hours">Lun–Vie 8:00am–6:30pm &nbsp;·&nbsp; Sáb 8:00am–2:00pm</span>
           </div>
           <a href="https://goo.gl/maps/8YFr3RuhJTMThEmU6" target="_blank" rel="noopener" class="btn-mapa" data-i18n="suc-maps">Ver en Google Maps →</a>
         </div>
@@ -260,31 +265,13 @@
             </div>
           </div>
           <ul class="sucursal-info">
-            <li><span>📍</span> Blvd. 5 de Febrero y Marcelo Rubio, Col. Pueblo Nuevo, CP 23050</li>
-            <li><span>📞</span> <a href="tel:+526121231477">612 123-1477</a></li>
+            <li><span><svg class="suc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" /></svg></span> Blvd. 5 de Febrero y Marcelo Rubio, Col. Pueblo Nuevo, CP 23050</li>
+            <li><span><svg class="suc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg></span> <a href="tel:+526121231477">612 123-1477</a></li>
           </ul>
           <div class="sucursal-horario">
-            <strong>🕐</strong> <span data-i18n="suc-hours">Lun–Vie 8:00am–6:30pm &nbsp;·&nbsp; Sáb 8:00am–2:00pm</span>
+            <strong><svg class="suc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5l3 3" /></svg></strong> <span data-i18n="suc-hours">Lun–Vie 8:00am–6:30pm &nbsp;·&nbsp; Sáb 8:00am–2:00pm</span>
           </div>
           <a href="https://goo.gl/maps/95wDqZjshpP9wRVL9" target="_blank" rel="noopener" class="btn-mapa" data-i18n="suc-maps">Ver en Google Maps →</a>
-        </div>
-
-        <div class="sucursal-card">
-          <div class="sucursal-header">
-            <span class="sucursal-num">04</span>
-            <div>
-              <h3>Guasave</h3>
-              <span class="sucursal-ciudad">Guasave, Sinaloa</span>
-            </div>
-          </div>
-          <ul class="sucursal-info">
-            <li><span>📍</span> Blvd. Central y Gabriel M. Martínez, Col. Centro, CP 81000</li>
-            <li><span>📞</span> <a href="tel:+526878722345">687 872-2345</a></li>
-          </ul>
-          <div class="sucursal-horario">
-            <strong>🕐</strong> <span data-i18n="suc-hours">Lun–Vie 8:00am–6:30pm &nbsp;·&nbsp; Sáb 8:00am–2:00pm</span>
-          </div>
-          <a href="https://goo.gl/maps/LpJYuGd24GybCPMH7" target="_blank" rel="noopener" class="btn-mapa" data-i18n="suc-maps">Ver en Google Maps →</a>
         </div>
 
       </div>
@@ -301,34 +288,29 @@
       </div>
       <div class="contacto-grid">
         <div class="contacto-card">
-          <div class="contacto-icon">💬</div>
+          <div class="contacto-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l1.3 -3.9c-2.324 -3.437 -1.426 -7.872 2.1 -10.374c3.526 -2.501 8.59 -2.296 11.845 .48c3.255 2.777 3.695 7.266 1.029 10.501c-2.666 3.235 -7.615 4.215 -11.574 2.293l-4.7 1" /></svg></div>
           <h4>WhatsApp</h4>
           <a href="https://wa.me/526699810810" target="_blank" rel="noopener">669 981-0810</a>
         </div>
         <div class="contacto-card">
-          <div class="contacto-icon">✉️</div>
+          <div class="contacto-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg></div>
           <h4 data-i18n="con-email-h4">Correo Electrónico</h4>
           <a href="mailto:social@llantassato.com">social@llantassato.com</a>
         </div>
         <div class="contacto-card">
-          <div class="contacto-icon">📘</div>
+          <div class="contacto-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></div>
           <h4>Facebook</h4>
           <a href="https://www.facebook.com/llantassato" target="_blank" rel="noopener">@llantassato</a>
         </div>
         <div class="contacto-card">
-          <div class="contacto-icon">📷</div>
+          <div class="contacto-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.5 7.5l0 .01" /></svg></div>
           <h4>Instagram</h4>
           <a href="https://instagram.com/llantassato" target="_blank" rel="noopener">@llantassato</a>
         </div>
         <div class="contacto-card">
-          <div class="contacto-icon">🕐</div>
+          <div class="contacto-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5l3 3" /></svg></div>
           <h4 data-i18n="con-hours-h4">Horario de Atención</h4>
           <p data-i18n="con-hours-p">Lun–Vie: 8:00 am – 6:30 pm<br>Sábado: 8:00 am – 2:00 pm<br>Domingo: Cerrado</p>
-        </div>
-        <div class="contacto-card">
-          <div class="contacto-icon">🌐</div>
-          <h4 data-i18n="con-web-h4">Sitio Web</h4>
-          <a href="https://www.llantassato.com" target="_blank" rel="noopener">llantassato.com</a>
         </div>
       </div>
     </div>
@@ -367,11 +349,10 @@
               <option>Rafael Buelna – Mazatlán</option>
               <option>Barrancos – Culiacán</option>
               <option>La Paz – BCS</option>
-              <option>Guasave – Sinaloa</option>
             </select>
           </div>
         </div>
-        <div class="info-form-row">
+        <div class="info-form-row info-form-row--split">
           <div class="info-form-group">
             <label for="infoTipo" data-i18n="inf-label-tipo">Tipo de consulta *</label>
             <select id="infoTipo" name="tipo" required>
@@ -384,17 +365,21 @@
             </select>
             <span class="info-error" id="infoTipoErr"></span>
           </div>
+          <div class="info-form-group">
+            <label for="infoMensaje" data-i18n="inf-label-msg">Mensaje *</label>
+            <textarea id="infoMensaje" name="mensaje" rows="2"
+              data-i18n-ph="inf-ph-msg"
+              placeholder="Escribe aquí tu pregunta o comentario..." required></textarea>
+            <span class="info-error" id="infoMensajeErr"></span>
+          </div>
         </div>
-        <div class="info-form-group info-form-group--full">
-          <label for="infoMensaje" data-i18n="inf-label-msg">Mensaje *</label>
-          <textarea id="infoMensaje" name="mensaje" rows="4"
-            data-i18n-ph="inf-ph-msg"
-            placeholder="Escribe aquí tu pregunta o comentario..." required></textarea>
-          <span class="info-error" id="infoMensajeErr"></span>
+        <div class="info-form-checkbox">
+          <input type="checkbox" id="infoWhatsapp" name="whatsapp" />
+          <label for="infoWhatsapp" data-i18n="inf-label-wa">Prefiero que me contacten por WhatsApp</label>
         </div>
         <button type="submit" class="btn btn-primary info-btn-submit" data-i18n="inf-btn">Enviar Mensaje</button>
         <div class="info-success" id="infoSuccess" data-i18n="inf-success">
-          ✅ ¡Mensaje enviado! Nos pondremos en contacto contigo pronto.
+          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> ¡Mensaje enviado! Nos pondremos en contacto contigo pronto.
         </div>
       </form>
     </div>
@@ -405,7 +390,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="#inicio" class="logo logo--light">
-          <img src="logo.png" alt="Llantas Sato" class="logo-img"
+          <img src="logo_outline_navbar.png" alt="Llantas Sato" class="logo-img"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
           <span class="logo-text" style="display:none;">
             <span class="logo-icon">&#11044;</span> Llantas<strong>Sato</strong>
@@ -413,8 +398,8 @@
         </a>
         <p data-i18n="ftr-brand-p">Expertos en llantas y servicios automotrices con más de 45 años en el mercado. Sinaloa y Baja California Sur.</p>
         <div class="social-links">
-          <a href="https://www.facebook.com/llantassato" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
-          <a href="https://instagram.com/llantassato" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+          <a href="https://www.facebook.com/llantassato" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
+          <a href="https://instagram.com/llantassato" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.5 7.5l0 .01" /></svg></a>
         </div>
       </div>
       <div class="footer-links">
@@ -440,10 +425,9 @@
       </div>
       <div class="footer-contact">
         <h4 data-i18n="con-h2">Contacto</h4>
-        <p>✉️ <a href="mailto:social@llantassato.com">social@llantassato.com</a></p>
-        <p>🌐 <a href="https://www.llantassato.com" target="_blank" rel="noopener">llantassato.com</a></p>
-        <p data-i18n="ftr-hours1">🕐 Lun–Vie: 8:00am – 6:30pm</p>
-        <p data-i18n="ftr-hours2">🕐 Sáb: 8:00am – 2:00pm</p>
+        <p><svg class="ftr-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg> <a href="mailto:social@llantassato.com">social@llantassato.com</a></p>
+        <p data-i18n="ftr-hours1"><svg class="ftr-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5l3 3" /></svg> Lun–Vie: 8:00am – 6:30pm</p>
+        <p data-i18n="ftr-hours2"><svg class="ftr-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5l3 3" /></svg> Sáb: 8:00am – 2:00pm</p>
       </div>
     </div>
     <div class="footer-bottom">

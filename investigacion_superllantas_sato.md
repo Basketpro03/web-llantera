@@ -18,7 +18,7 @@ Eres un agente encargado de construir el sitio web oficial de **Super Llantas Sa
 - **Nombre corto / logo:** Llantas Sato
 - **Razón social:** Super Llantas Sato S.A. de C.V.
 - **Fundada:** 1979
-- **Presencia:** 8 sucursales en Sinaloa y Baja California Sur
+- **Presencia:** 3 sucursales en Sinaloa y Baja California Sur
 - **Frase institucional:** "La seguridad de todos es nuestra prioridad."
 
 ---
@@ -50,7 +50,7 @@ Eres un agente encargado de construir el sitio web oficial de **Super Llantas Sa
 
 ---
 
-## 📍 Sucursales (solo estas 4)
+## 📍 Sucursales (solo estas 3)
 
 ### Sucursal Rafael Buelna — Mazatlán
 - **Dirección:** Av. Rafael Buelna #207, Fracc. Lomas de Mazatlán, CP 82110, Mazatlán, Sinaloa
@@ -66,11 +66,6 @@ Eres un agente encargado de construir el sitio web oficial de **Super Llantas Sa
 - **Dirección:** Blvd. 5 de Febrero y Marcelo Rubio, Col. Pueblo Nuevo, CP 23050, La Paz, BCS
 - **Teléfono:** 612 123-1477
 - **Google Maps:** https://goo.gl/maps/95wDqZjshpP9wRVL9
-
-### Sucursal Guasave — Sinaloa
-- **Dirección:** Blvd. Central y Gabriel M. Martínez, Col. Centro, CP 81000, Guasave, Sinaloa
-- **Teléfono:** 687 872-2345
-- **Google Maps:** https://goo.gl/maps/LpJYuGd24GybCPMH7
 
 ---
 
@@ -91,7 +86,9 @@ Eres un agente encargado de construir el sitio web oficial de **Super Llantas Sa
 
 ## 🛞 Marcas de Llantas
 
-Blackhawk · iLink · Mirage · Winrun · Antares · Broadpeak · Cooper · Goodyear
+Cooper · Goodyear · Michelin · Blackhawk · iLink · Mirage · Winrun · Antares · Broadpeak
+
+(9 marcas — orden con las más reconocidas primero: Cooper, Goodyear, Michelin)
 
 **Vehículos que atienden:** Automóvil, camioneta, deportivo, camión, agrícola
 

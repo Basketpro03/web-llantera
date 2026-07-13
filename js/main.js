@@ -1,8 +1,8 @@
 // ── EmailJS ───────────────────────────────────────────────────────────────────
 // Crea tu cuenta gratis en https://www.emailjs.com y reemplaza estos tres valores:
-const EMAILJS_PUBLIC_KEY  = 'TU_PUBLIC_KEY';   // Account → API Keys
-const EMAILJS_SERVICE_ID  = 'TU_SERVICE_ID';   // Email Services → Service ID
-const EMAILJS_TEMPLATE_ID = 'TU_TEMPLATE_ID';  // Email Templates → Template ID
+const EMAILJS_PUBLIC_KEY  = 'wS6eiolZR9nTJH5l9';   // Account → API Keys
+const EMAILJS_SERVICE_ID  = 'service_0h2df8f';     // Email Services → Service ID
+const EMAILJS_TEMPLATE_ID = 'template_x5nrkkp';    // Email Templates → Template ID
 
 emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
@@ -23,8 +23,8 @@ const TRANSLATIONS = {
     'hero-sub':  'Super Llantas Sato &nbsp;·&nbsp; Desde 1979',
     'hero-h1':   'Expertos en <span>Llantas</span> y Servicio Automotriz',
     'hero-desc': '"La seguridad de todos es nuestra prioridad."',
-    'hero-btn1': 'Ver Sucursales',
-    'hero-btn2': 'Nuestros Servicios',
+    'hero-btn1': 'Pedir Información',
+    'hero-btn2': 'Ver Sucursales',
 
     // Stats
     'stat-years':    'Años de experiencia',
@@ -61,7 +61,9 @@ const TRANSLATIONS = {
     // Brands
     'mrc-tag':       'Trabajamos con',
     'mrc-h2':        'Marcas Disponibles',
-    'mrc-desc':      'Manejamos las mejores marcas del mercado para automóviles, camionetas, deportivos, camiones y vehículos agrícolas.',
+    'mrc-desc':      'Algunas de nuestras marcas son:',
+    'mrc-cta-text':  '¿No sabes qué llanta necesita tu vehículo? Te asesoramos gratis.',
+    'mrc-cta-btn':   'Pedir Información',
     'mrc-veh-label': 'Vehículos que atendemos',
     'veh1': '<svg class="veh-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5" /></svg> Automóvil',
     'veh2': '<svg class="veh-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M16 17a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M5 9l2 -4h7.438a2 2 0 0 1 1.94 1.515l.622 2.485h3a2 2 0 0 1 2 2v3" /><path d="M10 9v-4" /><path d="M2 7v4" /><path d="M22.001 14.001a4.992 4.992 0 0 0 -4.001 -2.001a4.992 4.992 0 0 0 -4 2h-3a4.998 4.998 0 0 0 -8.003 .003" /><path d="M5 12v-3h13" /></svg> Camioneta',
@@ -73,12 +75,12 @@ const TRANSLATIONS = {
     'nos-tag': '¿Quiénes somos?',
     'nos-h2':  'Más de 45 años cuidando tu seguridad',
     'nos-p1':  '<strong>Super Llantas Sato S.A. de C.V.</strong> es una empresa fundada en 1979 con presencia en Sinaloa y Baja California Sur. Con más de 45 años en el mercado, nos hemos consolidado como líderes en venta de llantas y servicios automotrices en el noroeste de México.',
-    'nos-p2':  'Contamos con 4 sucursales estratégicamente ubicadas y un equipo de técnicos certificados respaldados por equipo computarizado de última generación.',
-    'nos-li1': '✅ Fundada en 1979',
-    'nos-li2': '✅ 4 sucursales en Sinaloa y BCS',
-    'nos-li3': '✅ Técnicos certificados',
-    'nos-li4': '✅ Equipo computarizado de precisión',
-    'nos-li5': '✅ Las mejores marcas de llantas',
+    'nos-p2':  'Contamos con 3 sucursales estratégicamente ubicadas y un equipo de técnicos certificados respaldados por equipo computarizado de última generación.',
+    'nos-li1': '<svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> Fundada en 1979',
+    'nos-li2': '<svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> 3 sucursales en Sinaloa y BCS',
+    'nos-li3': '<svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> Técnicos certificados',
+    'nos-li4': '<svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> Equipo computarizado de precisión',
+    'nos-li5': '<svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> Las mejores marcas de llantas',
     'nos-quote': '"La seguridad de todos es nuestra prioridad."',
 
     // Branches
@@ -95,7 +97,6 @@ const TRANSLATIONS = {
     'con-email-h4': 'Correo Electrónico',
     'con-hours-h4': 'Horario de Atención',
     'con-hours-p':  'Lun–Vie: 8:00 am – 6:30 pm<br>Sábado: 8:00 am – 2:00 pm<br>Domingo: Cerrado',
-    'con-web-h4':   'Sitio Web',
 
     // Info form
     'inf-tag':       '¿Tienes dudas?',
@@ -118,16 +119,17 @@ const TRANSLATIONS = {
     'inf-opt-tipo5':    'Otra consulta',
     'inf-label-msg':    'Mensaje *',
     'inf-ph-msg':       'Escribe aquí tu pregunta o comentario...',
+    'inf-label-wa':     'Prefiero que me contacten por WhatsApp',
     'inf-btn':          'Enviar Mensaje',
-    'inf-success':      '✅ ¡Mensaje enviado! Nos pondremos en contacto contigo pronto.',
+    'inf-success':      '<svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> ¡Mensaje enviado! Nos pondremos en contacto contigo pronto.',
 
     // Footer
     'ftr-brand-p': 'Expertos en llantas y servicios automotrices con más de 45 años en el mercado. Sinaloa y Baja California Sur.',
     'ftr-nav-h4':  'Navegación',
     'ftr-srv-h4':  'Servicios',
     'ftr-srv2':    'Balanceo y Alineación',
-    'ftr-hours1':  '🕐 Lun–Vie: 8:00am – 6:30pm',
-    'ftr-hours2':  '🕐 Sáb: 8:00am – 2:00pm',
+    'ftr-hours1':  '<svg class="ftr-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5l3 3" /></svg> Lun–Vie: 8:00am – 6:30pm',
+    'ftr-hours2':  '<svg class="ftr-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5l3 3" /></svg> Sáb: 8:00am – 2:00pm',
     'ftr-copy':    '© 2026 Super Llantas Sato S.A. de C.V. &nbsp;·&nbsp; Todos los derechos reservados.',
   },
 
@@ -145,8 +147,8 @@ const TRANSLATIONS = {
     'hero-sub':  'Super Llantas Sato &nbsp;·&nbsp; Since 1979',
     'hero-h1':   'Experts in <span>Tires</span> and Automotive Service',
     'hero-desc': '"Safety for everyone is our priority."',
-    'hero-btn1': 'View Branches',
-    'hero-btn2': 'Our Services',
+    'hero-btn1': 'Request Information',
+    'hero-btn2': 'View Branches',
 
     // Stats
     'stat-years':    'Years of experience',
@@ -183,7 +185,9 @@ const TRANSLATIONS = {
     // Brands
     'mrc-tag':       'We work with',
     'mrc-h2':        'Available Brands',
-    'mrc-desc':      'We carry the best brands on the market for cars, trucks, sports vehicles, heavy trucks, and agricultural vehicles.',
+    'mrc-desc':      'Some of our brands include:',
+    'mrc-cta-text':  'Not sure which tire your vehicle needs? We\'ll advise you for free.',
+    'mrc-cta-btn':   'Request Information',
     'mrc-veh-label': 'Vehicles we serve',
     'veh1': '<svg class="veh-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5" /></svg> Car',
     'veh2': '<svg class="veh-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M16 17a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M5 9l2 -4h7.438a2 2 0 0 1 1.94 1.515l.622 2.485h3a2 2 0 0 1 2 2v3" /><path d="M10 9v-4" /><path d="M2 7v4" /><path d="M22.001 14.001a4.992 4.992 0 0 0 -4.001 -2.001a4.992 4.992 0 0 0 -4 2h-3a4.998 4.998 0 0 0 -8.003 .003" /><path d="M5 12v-3h13" /></svg> Truck / SUV',
@@ -195,12 +199,12 @@ const TRANSLATIONS = {
     'nos-tag': 'Who are we?',
     'nos-h2':  'Over 45 years keeping you safe',
     'nos-p1':  '<strong>Super Llantas Sato S.A. de C.V.</strong> is a company founded in 1979 with presence in Sinaloa and Baja California Sur. With over 45 years in the market, we have established ourselves as leaders in tire sales and automotive services in northwestern Mexico.',
-    'nos-p2':  'We have 4 strategically located branches and a team of certified technicians backed by state-of-the-art computerized equipment.',
-    'nos-li1': '✅ Founded in 1979',
-    'nos-li2': '✅ 4 branches in Sinaloa and BCS',
-    'nos-li3': '✅ Certified technicians',
-    'nos-li4': '✅ Precision computerized equipment',
-    'nos-li5': '✅ The best tire brands',
+    'nos-p2':  'We have 3 strategically located branches and a team of certified technicians backed by state-of-the-art computerized equipment.',
+    'nos-li1': '<svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> Founded in 1979',
+    'nos-li2': '<svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> 3 branches in Sinaloa and BCS',
+    'nos-li3': '<svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> Certified technicians',
+    'nos-li4': '<svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> Precision computerized equipment',
+    'nos-li5': '<svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> The best tire brands',
     'nos-quote': '"Safety for everyone is our priority."',
 
     // Branches
@@ -217,7 +221,6 @@ const TRANSLATIONS = {
     'con-email-h4': 'Email Address',
     'con-hours-h4': 'Business Hours',
     'con-hours-p':  'Mon–Fri: 8:00 am – 6:30 pm<br>Saturday: 8:00 am – 2:00 pm<br>Sunday: Closed',
-    'con-web-h4':   'Website',
 
     // Info form
     'inf-tag':       'Have questions?',
@@ -240,16 +243,17 @@ const TRANSLATIONS = {
     'inf-opt-tipo5':    'Other inquiry',
     'inf-label-msg':    'Message *',
     'inf-ph-msg':       'Write your question or comment here...',
+    'inf-label-wa':     'I prefer to be contacted via WhatsApp',
     'inf-btn':          'Send Message',
-    'inf-success':      '✅ Message sent! We will contact you shortly.',
+    'inf-success':      '<svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></svg> Message sent! We will contact you shortly.',
 
     // Footer
     'ftr-brand-p': 'Tire and automotive service experts with over 45 years in the market. Sinaloa and Baja California Sur.',
     'ftr-nav-h4':  'Navigation',
     'ftr-srv-h4':  'Services',
     'ftr-srv2':    'Balancing and Alignment',
-    'ftr-hours1':  '🕐 Mon–Fri: 8:00am – 6:30pm',
-    'ftr-hours2':  '🕐 Sat: 8:00am – 2:00pm',
+    'ftr-hours1':  '<svg class="ftr-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5l3 3" /></svg> Mon–Fri: 8:00am – 6:30pm',
+    'ftr-hours2':  '<svg class="ftr-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5l3 3" /></svg> Sat: 8:00am – 2:00pm',
     'ftr-copy':    '© 2026 Super Llantas Sato S.A. de C.V. &nbsp;·&nbsp; All rights reserved.',
   }
 };
@@ -297,7 +301,7 @@ function setLanguage(lang) {
 
   // Toggle button label
   const btn = document.getElementById('langToggle');
-  if (btn) btn.textContent = lang === 'es' ? '🇺🇸 EN' : '🇲🇽 ES';
+  if (btn) btn.textContent = lang === 'es' ? 'EN' : 'ES';
 }
 
 // Init on load
@@ -397,6 +401,9 @@ function submitInfoForm() {
     branch:     document.getElementById('infoSucursal').value || '—',
     subject:    document.getElementById('infoTipo').value,
     message:    document.getElementById('infoMensaje').value.trim(),
+    prefer_whatsapp: document.getElementById('infoWhatsapp').checked
+      ? (currentLang === 'en' ? 'Yes — contact via WhatsApp' : 'Sí — Contactar por WhatsApp')
+      : (currentLang === 'en' ? 'No' : 'No'),
     to_email:   'social@llantassato.com',
   };
 
@@ -426,16 +433,96 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+        const el = entry.target;
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+        observer.unobserve(el);
+        // Once revealed, drop the inline transition (incl. stagger delay)
+        // so CSS hover transitions defined in the stylesheet work normally.
+        el.addEventListener('transitionend', () => {
+          el.style.transition = '';
+          el.style.opacity = '';
+          el.style.transform = '';
+        }, { once: true });
       }
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.service-card, .stat-item, .sucursal-card').forEach(el => {
+  const prepareReveal = (el, delay = 0) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(24px)';
-    el.style.transition = 'opacity .5s ease, transform .5s ease';
+    el.style.transition = `opacity .5s ease-out ${delay}ms, transform .5s ease-out ${delay}ms`;
     observer.observe(el);
+  };
+
+  // Grid items: staggered reveal based on position within their grid (capped at 360ms)
+  ['.service-card', '.marca-card', '.sucursal-card', '.contacto-card'].forEach(sel => {
+    document.querySelectorAll(sel).forEach(el => {
+      const i = Array.from(el.parentElement.children).indexOf(el);
+      prepareReveal(el, Math.min(i * 60, 360));
+    });
+  });
+
+  // Standalone blocks: simple fade-up
+  document.querySelectorAll('.stat-item, .section-header, .nosotros-img, .nosotros-text, .info-form, .marcas-cta')
+    .forEach(el => prepareReveal(el));
+}
+
+// ── Auto-scroll de carruseles (Servicios y Marcas, móvil) ──────────────────────
+// Desplazamiento continuo, lento y a velocidad constante; se pausa en cuanto
+// el usuario toca/desliza una tarjeta, y se reanuda solo tras unos segundos.
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const SPEED = 26; // px por segundo
+  const RESUME_DELAY = 4000; // espera tras la última interacción antes de reanudar
+
+  document.querySelectorAll('.services-grid, .marcas-grid').forEach(track => {
+    let visible = false;
+    let paused = false;
+    let lastTime = null;
+    let pos = track.scrollLeft; // acumulador flotante: scrollLeft redondea a
+                                 // entero, y el avance por frame (<1px) se
+                                 // perdía cada vez si se leía de vuelta de él.
+    let resumeTimeout = null;
+
+    // scroll-snap-type "mandatory" pelea con el desplazamiento programático
+    // (el navegador regresa al punto de snap en cada frame). Se desactiva
+    // mientras el auto-scroll corre, y se restaura mientras el usuario
+    // interactúa para que el deslizado manual siga acomodándose bien.
+    track.style.scrollSnapType = 'none';
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { visible = entry.isIntersecting; });
+    }, { threshold: 0.2 });
+    io.observe(track);
+
+    const pauseForInteraction = () => {
+      paused = true;
+      track.style.scrollSnapType = '';
+      clearTimeout(resumeTimeout);
+      resumeTimeout = setTimeout(() => {
+        pos = track.scrollLeft; // resincroniza con donde haya quedado/encajado
+        track.style.scrollSnapType = 'none';
+        lastTime = null;
+        paused = false;
+      }, RESUME_DELAY);
+    };
+    ['touchstart', 'pointerdown', 'wheel'].forEach(evt =>
+      track.addEventListener(evt, pauseForInteraction, { passive: true })
+    );
+
+    function frame(now) {
+      if (lastTime === null) lastTime = now;
+      const dt = (now - lastTime) / 1000;
+      lastTime = now;
+
+      if (visible && !paused && track.scrollWidth > track.clientWidth) {
+        const max = track.scrollWidth - track.clientWidth;
+        pos += SPEED * dt;
+        if (pos >= max) pos = 0;
+        track.scrollLeft = pos;
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
   });
 }
