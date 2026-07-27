@@ -403,7 +403,7 @@ function submitInfoForm() {
     message:    document.getElementById('infoMensaje').value.trim(),
     prefer_whatsapp: document.getElementById('infoWhatsapp').checked
       ? (currentLang === 'en' ? 'Yes — contact via WhatsApp' : 'Sí — Contactar por WhatsApp')
-      : (currentLang === 'en' ? 'No' : 'No'),
+      : (currentLang === 'en' ? 'No — contact via WhatsApp' : 'No — Contactar por WhatsApp'),
     to_email:   'social@llantassato.com',
   };
 
